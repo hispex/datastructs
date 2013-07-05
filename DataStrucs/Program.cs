@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataStrucs
 {
-	class Program
+	 class Program
 	{
-		static void Main(string[] args)
+		 static void Main(string[] args)
 		{
 			var tree = new Tree(1);
 			tree.AddSubtree(new Tree(2));

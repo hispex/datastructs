@@ -14,7 +14,7 @@ namespace DequeTest
 		/// The main entry point for the application.
 		/// </summary>
 		[STAThread]
-		static void Main(string[] args)
+		static void MainTester(string[] args)
 		{ 
             TestDeque(new Deque());
             TestDeque(Deque.Synchronized(new Deque()));
