@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,27 @@ namespace DataStrucs
 			
 
 		}
+	}
+
+	public abstract class ComparableObject:IComparable
+	{
+		public abstract int CompareTo(object obj);
+		private int Compare(object obj)
+		{
+			if (GetType()==obj.GetType())
+			{
+				return CompareTo(obj);
+			}
+			else
+			{
+				return GetType().FullName.CompareTo(obj.GetType().FullName);
+			}
+		}
+		public override bool Equals(object obj)
+		{
+			return Compare(obj) == 0;
+		}
+
 	}
 
 	public static class Algorithms
